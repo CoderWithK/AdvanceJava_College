@@ -1,5 +1,7 @@
 import java.awt.Color;
 import java.awt.event.*;
+import java.util.Random;
+
 import javax.swing.*;
 
 public class changecolor implements ActionListener{
@@ -28,10 +30,31 @@ public class changecolor implements ActionListener{
         public static void main(String[] args) {
             new changecolor();
         }
+        Random random = new Random();
+        int count;
 
         // Now we write the event handling code by implementing the respective method provided by ActionListener interface.
         public void actionPerformed(ActionEvent event){
-            f.getContentPane().setBackground(Color.CYAN);
+            // f.getContentPane().setBackground(Color.CYAN);
+            count = random.nextInt(5);
+            System.out.println(count);
+            switch (count) {
+                case 0:
+                f.getContentPane().setBackground(Color.BLACK);
+                    break;
+                case 1:
+                f.getContentPane().setBackground(Color.green);
+                    break;
+                case 2:
+                    f.getContentPane().setBackground(Color.cyan);
+                    break;
+                case 3:
+                f.getContentPane().setBackground(Color.yellow);
+                    break;
+                case 4:
+                f.getContentPane().setBackground(Color.red);
+                    break;
+            }
         }
     }
 
