@@ -5,6 +5,7 @@ public class loginform implements ActionListener{
     JTextField tfuser,tfPassword;
     JButton Login = new JButton("Login");
     JFrame f = new JFrame("Login");
+    // JFrame is made class variable here
 
     public loginform()
     {
